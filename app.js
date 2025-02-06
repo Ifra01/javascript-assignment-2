@@ -46,7 +46,6 @@
 // answer: (part: a)
 // var num;
 // (part: b)
-// num = "??"
 // document.write("Value after variable declaration is " + num);
 // (part:c)
 // num = 5;
@@ -78,32 +77,15 @@
 // Cost of one movie ticket is 600 PKR. Write a script to store
 // ticket price in a variable & calculate the cost of buying 5 tickets
 // to a movie.
-// answer: var ticketPrice = 600;
+// answer: let ticketPrice = 600;
 // ticketPrice = 600 * 5;
 // document.write("Total cost to buy 5 tickets to a movie is " + ticketPrice + "PKR");
 
 // question 5
-// answer: document.write("table of 4");
-// document.write("<br />");
-// document.write("4 x 1 = 4");
-// document.write("<br />");
-// document.write("4 x 2 = 8");
-// document.write("<br />");
-// document.write("4 x 3 = 12");
-// document.write("<br />");
-// document.write("4 x 4 = 16");
-// document.write("<br />");
-// document.write("4 x 5 = 20");
-// document.write("<br />");
-// document.write("4 x 6 = 24");
-// document.write("<br />");
-// document.write("4 x 7 = 28");
-// document.write("<br />");
-// document.write("4 x 8 = 32");
-// document.write("<br />");
-// document.write("4 x 9 = 36");
-// document.write("<br />");
-// document.write("4 x 10 = 40");
+// answer: document.write("table of 6");
+//  for(var i=1; i<=10; i++){
+//     document.write("6 x " + i + " = " + "6"*i + "<br />")
+//  }
 
 // question 6
 // The Temperature Converter: It’s hot out! Let’s make a
@@ -113,18 +95,16 @@
 // c. Now store a Fahrenheit temperature into a variable.
 // d. Convert it to Celsius & output “NNoF is NNoC”.
 // answer: (part: a)
-// var celTemp = "40°C";
+// var celTemp = "40";
 // (part: b)
-// celTemp = (°F - 32) x 5 / 9
-// celTemp = 104°F
-// document.write(celTemp + " is 104°F");
+// var fahtemp = (celTemp * 5/9) +32
+// document.write(celTemp + "C" + " is " + fahtemp + "F");
 // (part: c)
-// var fahTemp = "40°F";
+// fahTemp = "40";
 // (part: d)
-// fahTemp = (°C x 9 / 5) + 32;
-// fahTemp = 4.4°C
+// celTemp = (fahtemp * 9/5) + 32;
 // document.write("<br />");
-// document.write(fahTemp + " is 4.4°C");
+// document.write(fahtemp + "F" + " is " + celTemp + "C");
 
 // question 7
 // Write a program to implement checkout process of a
@@ -297,8 +277,9 @@
 // document.write("Result:");
 // document.write("<br />");
 // var value = 10;
-// document.write("The value of a is: " + value);
 // document.write("<br />");
+// document.write("The value of a is: " + value);
+
 // document.write("<br />");
 // document.write("The value of ++a is: " + ++value);
 // document.write("<br />");
@@ -344,14 +325,94 @@
 // Write a program that takes input a name from user &
 // greet the user.
 // answer: 
-// prompt("hello user! what's your name?");
+// alert("hello user!");
+// prompt("what's your name");
 
 // question 4
 // Write a program to take input a number from user &
 // display it’s multiplication table on your browser. If user
 // does not enter a new number, multiplication table of 5
 // should be displayed by default.
-answer: 
-prompt("enter any number");
-document.write()
+// answer: 
+// numFromUser = prompt("enter a number");
+// if (numFromUser == 0) {
+//     for (var i = 1; i <= 10; i++) {
+//         document.write("5" + "x" + i + "=" + "5" * i + "<br />")
+//     }
+// }
+
+// else {
+//     for (var i = 1; i <= 10; i++) {
+//         document.write(numFromUser + "x" + i + "=" + numFromUser * i + "<br />")
+//     }
+// }
+
+// question 5
+// Take
+// a) Take three subjects name from user and store them in 3
+// different variables.
+// b) Total marks for each subject is 100, store it in another
+// variable.
+// c) Take obtained marks for first subject from user and
+// stored it in different variable.
+// d) Take obtained marks for remaining 2 subjects from user
+// and store them in variables.
+// e) Now calculate total marks and percentage and show the
+// result in browser like this.(Hint: user table)
+// answer:
+// (part: a)
+// var english = prompt("enter subject name");
+// var urdu = prompt("enter subject name");
+// var science = prompt("enter subject name");
+// (part: b)
+// var totalMarks_Each = 100;
+// (partL: c)
+// var obt_Marks_In_Eng = +prompt("enter obtained marks in english");
+// (part: d)
+// var obt_Marks_In_Urdu = +prompt("enter obtained marks in urdu");
+// var obt_Marks_In_Science = +prompt("enter obtained marks in science");
+// (part: e)
+// var totalMarks = totalMarks_Each + totalMarks_Each + totalMarks_Each;
+// var marksObtained = obt_Marks_In_Eng + obt_Marks_In_Urdu + obt_Marks_In_Science;
+// var percent_Eng = (obt_Marks_In_Eng * 100) / totalMarks_Each;
+// var percent_Urdu = (obt_Marks_In_Urdu * 100) / totalMarks_Each;
+// var percent_Science = (obt_Marks_In_Science * 100) / totalMarks_Each;
+// var percentage = (marksObtained * 100) / totalMarks;
+
+// document.write("<table>")
+// document.write("<tr>")
+// document.write("<th>Subject</th>")
+// document.write("<th>Total mark</t>")
+// document.write("<th>Marks obtained</th>")
+// document.write("<th>Percentage</th>")
+// document.write("</tr>")
+
+// document.write("<tr>")
+// document.write("<td>English</td>")
+// document.write("<td>" + totalMarks_Each + "</td>")
+// document.write("<td>" + obt_Marks_In_Eng + "</td>")
+// document.write("<td>" + percent_Eng + "%"+ "</td>")
+// document.write("</tr>")
+
+// document.write("<tr>")
+// document.write("<td>Urdu</td>")
+// document.write("<td>" + totalMarks_Each + "</td>")
+// document.write("<td>" + obt_Marks_In_Urdu + "</td>")
+// document.write("<td>" + percent_Urdu + "%"+"</td>")
+// document.write("</tr>")
+
+// document.write("<tr>")
+// document.write("<td>Science</td>")
+// document.write("<td>" + totalMarks_Each + "</td>")
+// document.write("<td>" + obt_Marks_In_Science + "</td>")
+// document.write("<td>" + percent_Science + "%"+ "</td>")
+// document.write("</tr>")
+
+// document.write("<tr>")
+// document.write("<th></th>")
+// document.write("<th>"+totalMarks+"</th>")
+// document.write("<th>"+marksObtained+"</th>")
+// document.write("<th>"+percentage+ "%"+ "</th>")
+// document.write("</tr>")
+// document.write("</table>")
 
